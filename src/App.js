@@ -58,7 +58,6 @@ console.log(this.props);
   );
 }
 }
-
 const mapStateToProps = ({user}) =>({
   currentUser: user.currentUser
 })
