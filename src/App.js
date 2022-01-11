@@ -4,6 +4,7 @@ import HomePage from './pages/homepage/homepage.component'
 import ShopPage from './pages/shop/shop.component';
 import Header from './component/header/header.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import CheckoutPage from './pages/checkout/checkout.component';
 
 import { auth, createUserProfileDocument } from './component/firebase/firebase.util';
 
@@ -52,6 +53,7 @@ console.log(this.props);
       <Routes>
       <Route path="/" element={<HomePage/>} />
       <Route path='/shop' element={<ShopPage/>} />
+      <Route path='/checkout' element={<CheckoutPage/>} />
       <Route path='/signin' element={ this.props.currentUser ? (<Navigate replace to ='/'/>) : (<SignInAndSignUpPage/>) }  />
       </Routes>
     </div>
